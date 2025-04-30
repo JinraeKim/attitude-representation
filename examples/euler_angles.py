@@ -5,7 +5,7 @@ from src.attitude import euler2rot
 from src.visualize import plot_body_frame, plot_inertial_frame
 
 if __name__ == "__main__":
-    names = ["initial", "yaw (45 deg)", "pitch (45 deg)", "roll (45 deg)"]
+    names = ["0: initial", "1: yaw (45 deg)", "2: pitch (45 deg)", "3: roll (45 deg)"]
     angles_list = [
         np.array([0, 0, 0.0]),
         np.array([0, 0, np.deg2rad(45)]),
