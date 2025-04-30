@@ -34,11 +34,4 @@ Conventions, notations, all mathematical details I am referring to can be found 
 
 ### Euler angles
 - See `./src/euler_angles.py` for the code.
-#### Rotation (roll 15 deg)
-![alt text](./figures/euler_angles/roll.png)
-#### Rotation (pitch 15 deg)
-![alt text](./figures/euler_angles/pitch.png)
-#### Rotation (yaw 15 deg)
-![alt text](./figures/euler_angles/yaw.png)
-#### Rotation (mixed; yaw 45 deg, pitch 45 deg, roll 45 deg)
-![alt text](./figures/euler_angles/mixed.png)
+![alt text](./figures/euler_angles.png)

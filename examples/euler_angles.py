@@ -5,16 +5,19 @@ from src.attitude import euler2rot
 from src.visualize import plot_body_frame, plot_inertial_frame
 
 if __name__ == "__main__":
-    names = ["roll", "pitch", "yaw", "mixed"]
+    names = ["initial", "yaw (45 deg)", "pitch (45 deg)", "roll (45 deg)"]
     angles_list = [
-        np.array([np.deg2rad(15), 0, 0]),
-        np.array([0, np.deg2rad(15), 0]),
-        np.array([0, 0, np.deg2rad(15)]),
+        np.array([0, 0, 0.0]),
+        np.array([0, 0, np.deg2rad(45)]),
+        np.array([0, np.deg2rad(45), np.deg2rad(45)]),
         np.array([np.deg2rad(45), np.deg2rad(45), np.deg2rad(45)]),
     ]
-    for name, angles in zip(names, angles_list):
-        fig, ax = plot_inertial_frame()
+    fig = plt.figure(figsize=(12, 3))
+    for i, (name, angles) in enumerate(zip(names, angles_list)):
+        ax = fig.add_subplot(1, 4, i + 1, projection="3d")
+        ax.set_title(name)
+        plot_inertial_frame(ax=ax)
 
         R = euler2rot(*angles)
         plot_body_frame(ax=ax, R=R)
-        plt.savefig("./figures/euler_angles/" + name + ".png")
+    plt.savefig("./figures/euler_angles.png")
