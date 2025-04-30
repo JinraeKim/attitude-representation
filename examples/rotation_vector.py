@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.attitude import rotvec2rot
+from src.attitude import rot2rotvec, rotvec2rot
 from src.visualize import plot_body_frame, plot_inertial_frame
 
 
@@ -36,4 +36,10 @@ if __name__ == "__main__":
 
         R = R_list[i]
         plot_body_frame(ax=ax, R=R)
+
+        _rotvec = rot2rotvec(R)
+        _R = rotvec2rot(*_rotvec)
+        print(f"Obtained rotation matrix using angle and axis: {R}")
+        print(f"reverted rotation matrix using rot2rotvec and rotvec2rot: {_R}")
+
     plt.savefig("./figures/rotvec.png")

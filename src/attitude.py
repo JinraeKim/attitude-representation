@@ -114,3 +114,18 @@ def rotvec2rot(angle, vec):
             ],
         ]
     )
+
+
+def rot2rotvec(R):
+    angle = np.arccos((np.trace(R) - 1) / 2)
+    if np.linalg.norm(angle) < 1e-9:
+        vec = np.array([1, 0, 0])
+    else:
+        vec = np.array(
+            [
+                R[2, 1] - R[1, 2],
+                R[0, 2] - R[2, 0],
+                R[1, 0] - R[0, 1],
+            ]
+        ) / (2 * sin(angle))
+    return angle, vec
