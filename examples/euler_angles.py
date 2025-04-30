@@ -15,7 +15,7 @@ if __name__ == "__main__":
     fig = plt.figure(figsize=(12, 3))
     for i, (name, angles) in enumerate(zip(names, angles_list)):
         ax = fig.add_subplot(1, 4, i + 1, projection="3d")
-        ax.set_title(name)
+        ax.set_title(name, fontsize=20)
         plot_inertial_frame(ax=ax)
 
         R = euler2rot(*angles)
