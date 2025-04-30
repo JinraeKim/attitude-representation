@@ -29,6 +29,9 @@ Conventions, notations, all mathematical details I am referring to can be found 
 
 
 ## Demonstrations
+### Visualization
+- See `./src/visualization.py` for the code. This uses rotation matrix to visualize the rotation of frames.
+
 ### Euler angles
 - See `./src/euler_angles.py` for the code.
 #### Rotation (roll 15 deg)
