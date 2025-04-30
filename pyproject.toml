@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attitude-representation"
+version = "0.1.0"
+dependencies = [
+  "numpy",
+  "matplotlib",
+]  # may need to specify the version for better compatibility
+requires-python = ">=3.8"
+authors = [
+  {name = "Jinrae Kim", email = "kjl950403@gmail.com"},
+]
+maintainers = [
+  {name = "Jinrae Kim", email = "kjl950403@gmail.com"},
+]
+description = "A tutorial of different attitude representations. I got confused so many times with this."
+readme = "README.md"
+license = {text = "MIT"}  # or license = {file = "LICENSE.txt"} for legacy declaration
+# license-files = ["LICEN[CS]E.*"]
+keywords = ["attitude representation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",  # specify the versions you support here
+  "Programming Language :: Python :: 3.11",  # specify the versions you support here
+]
+
+# [project.optional-dependencies]
+# gui = []
+# cli = []
+# gui = ["PyQt5"]
+# cli = [
+#   "rich",
+#   "click",
+# ]
+
+# [project.urls]
+# Homepage = "https://example.com"
+# Documentation = "https://readthedocs.org"
+# Repository = "https://github.com/me/spam.git"
+# "Bug Tracker" = "https://github.com/me/spam/issues"
+# Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+# [project.scripts]
+# spam-cli = "spam:main_cli"
+
+# [project.gui-scripts]
+# spam-gui = "spam:main_gui"
+
+# [project.entry-points."spam.magical"]
+# tomatoes = "spam:main_tomatoes"
