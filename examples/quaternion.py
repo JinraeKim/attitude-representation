@@ -39,7 +39,7 @@ if __name__ == "__main__":
     ]
     q_acc_list = right_fold_accumulate(q_list, quat_mul)
     fig = plt.figure(figsize=(12, 3))
-    for i, (name) in enumerate(zip(names)):
+    for i, name in enumerate(names):
         ax = fig.add_subplot(1, 4, i + 1, projection="3d")
         ax.set_title(name, fontsize=20)
         plot_inertial_frame(ax=ax)

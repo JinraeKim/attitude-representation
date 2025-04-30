@@ -29,7 +29,7 @@ if __name__ == "__main__":
     ]
     R_list = right_fold_accumulate_rot(rotvec_list)
     fig = plt.figure(figsize=(12, 3))
-    for i, (name) in enumerate(zip(names)):
+    for i, (name) in enumerate(names):
         ax = fig.add_subplot(1, 4, i + 1, projection="3d")
         ax.set_title(name, fontsize=20)
         plot_inertial_frame(ax=ax)
