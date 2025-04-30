@@ -20,11 +20,13 @@ Conventions, notations, all mathematical details I am referring to can be found 
 
 ### Representations
 - Euler angles: $\phi$, $\theta$, $\psi$ (roll, pitch, yaw)
-    - Convention: ZYX rotation (from $I$ to $B$ frame)
+    - Convention: ZYX rotation (from $I$ to $B$ frame; angles are defined in the intermediate local frames).
+- Rotation vector: $u$ (axis of rotation; unit vector) and $\theta$ (angle of rotation; abuse of notation)
+    - Convention: $u$ is defined in the global frame.
 - Rotation matrix: $R$
-    - Convention: $R = R_{BI}$ (from $B$ to $I$ frame)
+    - Convention: $R = R_{B \to I}$ (i.e., $v^{I} = R v^{B}$)
 - (Unit) quaternion: $q$
-    - Convention: $q = [q_w, q_v^T]^T = [q_w, q_x, q_y, q_z]^T$ (scalar first), corresponding to $R$
+    - Convention: $q = [q_w, q_v^T]^T = [q_w, q_x, q_y, q_z]^T$ (scalar first), corresponding to $R$.
 
 
 
@@ -33,5 +35,13 @@ Conventions, notations, all mathematical details I am referring to can be found 
 - See `./src/visualization.py` for the code. This uses rotation matrix to visualize the rotation of frames.
 
 ### Euler angles
-- See `./src/euler_angles.py` for the code.
+- See `./examples/euler_angles.py` for the code.
 ![alt text](./figures/euler_angles.png)
+
+### Unit quaternion
+- See `./examples/quaternion.py` for the code.
+![alt text](./figures/quaternion.png)
+
+### Rotation vector
+- See `./examples/rotation_vector.py` for the code.
+![alt text](./figures/rotvec.png)
