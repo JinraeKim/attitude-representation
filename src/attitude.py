@@ -27,3 +27,13 @@ def euler2rot(phi, theta, psi):
             ],
         ]
     )
+
+
+def rot2euler(R):
+    return np.array(
+        [
+            np.arctan2(R[2, 1], R[2, 2]),
+            -np.arcsin(R[2, 0]),
+            np.arctan2(R[1, 0], R[0, 0]),
+        ]
+    )

@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from src.attitude import euler2rot
+from src.attitude import euler2rot, rot2euler
 from src.visualize import plot_body_frame, plot_inertial_frame
 
 if __name__ == "__main__":
@@ -19,5 +19,8 @@ if __name__ == "__main__":
         plot_inertial_frame(ax=ax)
 
         R = euler2rot(*angles)
+        _angles = rot2euler(R)
+        print(f"True Euler angles: {angles}")
+        print(f"Euler angles from rotation matrix: {_angles}")
         plot_body_frame(ax=ax, R=R)
     plt.savefig("./figures/euler_angles.png")
