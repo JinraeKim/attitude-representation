@@ -24,7 +24,8 @@ Conventions, notations, all mathematical details I am referring to can be found 
 - Rotation vector: $u$ (axis of rotation; unit vector) and $\theta$ (angle of rotation; abuse of notation)
     - Convention: $u$ is defined in the global frame.
 - Rotation matrix: $R$
-    - Convention: $R = R_{B \to I}$ (i.e., $v^{I} = R v^{B}$)
+    - Convention: $R = R_{B \to I}$ (i.e., $v^{I} = R v^{B}$ where $v^{X}$ means a vector $v$ read in coordinate system $X$.) Or, you can consider it as $v_new = R v$ where $v_new$ is a new vector obtained by rotating $v$.
+    - For example, with (roll, pitch, yaw) = (45, 45, 45) deg, $v^{B} = [1, 0, 0]$ => $v^{I} = [0.5, 0.5, -sqrt(2)/2]$. Or, you can consider it as $v = [1, 0, 0]$ (in $I$) is rotated to $v_new = [0.5, 0.5, -sqrt(2)/2]$. Please compare this with visualization.
 - (Unit) quaternion: $q$
     - Convention: $q = [q_w, q_v^T]^T = [q_w, q_x, q_y, q_z]^T$ (scalar first), corresponding to $R$.
 
